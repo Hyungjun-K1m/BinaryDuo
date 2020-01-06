@@ -10,6 +10,7 @@
 --  models/resnet.lua
 --
 
+
 require 'nn'
 require 'cunn'
 require 'cudnn'

@@ -6,6 +6,7 @@ local find = require 'cudnn.find'
 local errcheck = cudnn.errcheck
 local checkedCall = find.checkedCall
 
+
 function cudnnQuantSpatialConvolution:__init(nInputPlane, nOutputPlane, kW, kH, dW, dH, padW, padH, Wbits, clip, groups)
     local delayedReset = self.reset
     self.reset = function() end

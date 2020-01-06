@@ -2,6 +2,7 @@ local nn = require 'nn'
 require 'cunn'
 require '../newLayers/QuantizedNeurons.lua'
 
+
 local Convolution = cudnn.SpatialConvolution
 local ReLU = cudnn.ReLU
 local Max = nn.SpatialMaxPooling

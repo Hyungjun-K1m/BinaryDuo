@@ -3,6 +3,7 @@ require 'cunn'
 require '../newLayers/QuantizedNeurons.lua'
 require '../newLayers/cudnnQuantSpatialConvolution.lua'
 
+
 local Convolution = cudnn.SpatialConvolution
 local ConvolutionQ = cudnnQuantSpatialConvolution
 local ReLU = cudnn.ReLU

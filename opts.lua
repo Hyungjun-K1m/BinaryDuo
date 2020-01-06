@@ -8,6 +8,7 @@
 --
 local M = { }
 
+
 function M.parse(arg)
    local cmd = torch.CmdLine()
    cmd:text()

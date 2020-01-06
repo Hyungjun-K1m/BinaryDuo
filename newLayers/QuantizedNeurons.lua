@@ -1,5 +1,6 @@
 local QuantizedNeurons,parent = torch.class('QuantizedNeurons', 'nn.Module')
 
+
 function QuantizedNeurons:__init(bitA,binarymode,exception)
   parent.__init(self)
   if bitA > 0.9999 then
