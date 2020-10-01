@@ -35,10 +35,13 @@ function M.setup(opt, checkpoint)
    elseif opt.deploy ~= 'none' then
       model = require('models/' .. opt.netType)(opt)
       print('=> Deploying model from '.. opt.deploy)
-      local pretrained = torch.load(opt.deploy..'/model_best.t7')
       if opt.deployOpt == 0 then
          error('Please define deploy option!')
+      elseif opt.deployOpt == 1 then
+         print('=> Getting model from ' .. opt.deploy)
+         model = torch.load(opt.deploy):type(opt.tensorType)
       elseif opt.deployOpt == 6 then
+         local pretrained = torch.load(opt.deploy..'/model_best.t7')
          print('=> decoupling coupled model...')
          model = model_decouple(model,pretrained,opt)
       else
